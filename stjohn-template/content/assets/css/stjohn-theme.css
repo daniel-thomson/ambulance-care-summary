@@ -1,0 +1,174 @@
+:root {
+  --ig-status-text-color: #222222;
+  --navbar-bg-color: #feb913;
+  --footer-bg-color: #222222;
+  --footer-container-bg-color: #000000;
+  --stripe-bg-color: #000000;
+
+  --btn-hover-color: #000000;
+  --btn-active-color: #000000;
+  --btn-text-color: #4d3700;
+  --btn-gradient-start-color: #feb913;
+  --btn-gradient-end-color: #f2a900;
+  --btn-gradient-start-color-alpha: #fffeb913;
+  --btn-gradient-end-color-alpha: #fff2a900;
+  --link-color: #5f4507;
+  --link-hover-color: #000000;
+
+  --publish-box-bg-color: #fff4cf;
+  --publish-box-border: 1px solid #feb913;
+
+  --toc-box-bg-color: #fff7df;
+  --toc-box-border: 1px solid #f2a900;
+
+  --stu-note-background-color: #fff7df;
+  --stu-note-border-left-color: #feb913;
+
+  --ig-header-color: #ffffff;
+  --ig-header-container-color: #ffffff;
+  --footer-nav-bg-color: #f5f5f5;
+
+  --footer-text-color: #ffffff;
+  --footer-hyperlink-text-color: #feb913;
+  --footer-highlight-text-color: #feb913;
+
+  --breadcrumb-bg-color: #f5f5f5;
+  --breadcrumb-text-color: #3e3e3e;
+
+  --dragon-background-color: #fff7df;
+  --dragon-text-color: #222222;
+  --dragon-font-color: #222222;
+
+  --translation-background-color: #f5f5f5;
+  --translation-text-color: #222222;
+}
+
+#segment-header {
+  border-top: 4px solid #000000;
+}
+
+#segment-header > .container {
+  min-height: 126px;
+}
+
+#stjohn-nav {
+  float: var(--ig-left);
+  margin: 17px 0 0 20px;
+  width: 87px;
+}
+
+#stjohn-logo {
+  display: block;
+  height: 122px;
+  overflow: hidden;
+  width: 87px;
+}
+
+#stjohn-logo span {
+  background: url("../images/stjohn-sprite.png") no-repeat 0 -27px;
+  display: block;
+  height: 122px;
+  width: 87px;
+}
+
+#ig-status {
+  margin-top: 29px;
+}
+
+#stripe {
+  height: 4px;
+}
+
+.navbar-inverse,
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  background-color: var(--navbar-bg-color);
+  border-color: var(--navbar-bg-color);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: var(--btn-text-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #000000;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #000000;
+}
+
+.dropdown-menu {
+  background-color: #000000;
+  border-bottom: 3px solid #feb913;
+}
+
+.dropdown-menu > li > a {
+  color: #d7d7d7;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  background-color: #ffffff;
+  background-image: none;
+  color: #000000;
+  filter: none;
+}
+
+#publish-box,
+.markdown-toc,
+.toc-box {
+  border-radius: 0;
+}
+
+blockquote.stu-note,
+.note-to-balloters,
+.stu-note {
+  border-left-width: 5px;
+}
+
+.stu-note::before,
+.note-to-balloters::before {
+  background-color: #feb913;
+  color: #000000;
+}
+
+.nav-tabs {
+  border-bottom-color: #feb913;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border-color: #feb913 #feb913 transparent;
+  color: #000000;
+}
+
+table.grid th,
+table.list th,
+table.codes th {
+  background-color: #000000;
+  color: #ffffff;
+}

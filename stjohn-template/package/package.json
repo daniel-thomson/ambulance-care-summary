@@ -1,0 +1,11 @@
+{
+  "name": "stjohn-template",
+  "version": "0.1.0",
+  "type": "fhir.template",
+  "license": "CC-BY-4.0",
+  "description": "St John themed FHIR IG template for the Ambulance Care Summary implementation guide.",
+  "base": "fhir2.base.template",
+  "dependencies": {
+    "fhir2.base.template": "current"
+  }
+}
