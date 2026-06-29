@@ -2,7 +2,7 @@
 
 <p class="dragon">Important note: This implementation guide is being provided for informational / example usage only - much of it is auto-generated / many details are likely to be wrong.</p>
 
-This Implementation Guide provides an example of how a New Zealand Ambulance Care Summary might structured and represented as an FHIR&reg; document. It is a FHIR realisation of the data set specified in the draft of the HISO 10052:2026 Ambulance Care Summary Standard.
+This Implementation Guide provides an example of how a New Zealand Ambulance Care Summary might structured and represented as an FHIR document. It is based on the draft of the HISO 10052:2026 Ambulance Care Summary Standard.
 
 The Ambulance Care Summary supports two purposes described in the standard:
 
