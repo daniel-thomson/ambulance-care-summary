@@ -38,3 +38,11 @@ Description: "The patient consented to their personal information being shared w
 * ^context[+].type = #element
 * ^context[=].expression = "Appointment"
 * value[x] only boolean
+
+Extension: ContactInstruction
+Id: contact-instruction
+Title: "Contact Instruction"
+Description: "Free-text instruction or context for contacting a person relevant to the ambulance encounter."
+* ^context[+].type = #element
+* ^context[=].expression = "RelatedPerson"
+* value[x] only string

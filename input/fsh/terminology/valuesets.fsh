@@ -76,6 +76,21 @@ Description: "Unit of measure for patient age: day, month or year (UCUM)."
 * $UCUM#mo "month"
 * $UCUM#a "year"
 
+ValueSet: AcsIncidentEventVS
+Id: acs-incident-event-vs
+Title: "ACS Incident Event Value Set"
+Description: "Operational event types in an ambulance incident timeline."
+* ^status = #draft
+* ^experimental = true
+* AcsMetadataCS#incident-event-call-received "Time call received"
+* AcsMetadataCS#incident-event-unit-dispatched "Time unit dispatched"
+* AcsMetadataCS#incident-event-unit-responded "Time unit responded"
+* AcsMetadataCS#incident-event-arrived-scene "Time unit arrived at scene"
+* AcsMetadataCS#incident-event-patient-located "Time patient located"
+* AcsMetadataCS#incident-event-departed-scene "Time unit departed with patient"
+* AcsMetadataCS#incident-event-arrived-destination "Time unit arrived at destination"
+* AcsMetadataCS#incident-event-closed "Time incident closed"
+
 ValueSet: MpdsVS
 Id: mpds-vs
 Title: "Medical Priority Dispatch System (MPDS) Value Set"

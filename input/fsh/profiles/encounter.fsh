@@ -11,9 +11,16 @@ Description: "Summary of an ambulance encounter with a patient (an 'incident' in
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
-* identifier contains masterIncidentNumber 1..1 MS
+* identifier contains
+    masterIncidentNumber 1..1 MS and
+    accClaimNumber 0..1 MS and
+    unitCallSign 0..* MS
 * identifier[masterIncidentNumber].system = "https://standards.digital.health.nz/ns/ambulance-master-incident-number"
 * identifier[masterIncidentNumber] ^short = "Master Incident Number assigned by the CAD system (format NNNN-N-ccyy/mm/dd)"
+* identifier[accClaimNumber].system = $acc-claim
+* identifier[accClaimNumber] ^short = "Existing ACC claim number"
+* identifier[unitCallSign].system = "https://standards.digital.health.nz/ns/ambulance-unit-call-sign"
+* identifier[unitCallSign] ^short = "Ambulance unit call sign"
 * status MS
 * class MS
 * type 1..1 MS
@@ -24,6 +31,9 @@ Description: "Summary of an ambulance encounter with a patient (an 'incident' in
 * participant MS
 * participant.individual only Reference(AmbulanceServiceProviderRole or AmbulanceClinician)
 * participant ^short = "Ambulance service provider (clinician) attending the incident"
+* location MS
+* location.location only Reference(AcsIncidentLocation or ReceivingFacility)
+* location.location ^short = "Incident scene or relevant encounter location"
 * period 1..1 MS
 * period.start 1..1 MS
 * period.start ^short = "Encounter date/time - when the operator first became aware of the incident"

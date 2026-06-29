@@ -47,6 +47,8 @@ Description: "An organisation that provides road or air ambulance services in Ne
 * identifier[hpiOrg].system = $hpi-org
 * identifier[hpiOrg] ^short = "HPI Organisation identifier (includes check digit)"
 * name 1..1 MS
+* telecom MS
+* address MS
 
 
 Profile: ReceivingFacility

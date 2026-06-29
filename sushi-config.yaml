@@ -52,6 +52,12 @@ dependencies:
 #     simpleExamples.xml:
 #     complexExamples.xml:
 #
+pages:
+  index.md:
+    title: Home
+  acs-document-structure.md:
+    title: ACS document structure
+
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -76,6 +82,7 @@ dependencies:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  ACS document structure: acs-document-structure.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

@@ -58,20 +58,36 @@ Description: "The Composition that structures an Ambulance Care Summary FHIR doc
 * section ^slicing.description = "Ambulance Care Summary sections (HISO 10052:2026 §2)"
 * section contains
     encounter 1..1 MS and
+    contacts 0..1 MS and
+    additionalDemographics 0..1 MS and
     socialHistory 0..1 MS and
     problems 1..1 MS and
+    primarySurvey 0..1 MS and
+    strokeAssessments 0..1 MS and
+    fallsRisk 0..1 MS and
     pastHistory 0..1 MS and
     allergies 0..1 MS and
     medicationSummary 0..1 MS and
     vitalSigns 0..1 MS and
     medicationsAdministered 0..1 MS and
     procedures 0..1 MS and
-    carePlan 0..1 MS
+    refusal 0..1 MS and
+    competence 0..1 MS and
+    carePlan 0..1 MS and
+    clinicalImages 0..1 MS
 
 * section[encounter].title = "Incident / Encounter"
 * section[encounter].code = $LOINC#46240-8 "History of encounters"
 * section[encounter].entry 1..*
-* section[encounter].entry only Reference(AmbulanceEncounter or AcsPatientStatus)
+* section[encounter].entry only Reference(AmbulanceEncounter or AcsPatientStatus or AcsIncidentLocation or AcsIncidentEvent)
+
+* section[contacts].title = "Patient Contacts"
+* section[contacts].code = AcsMetadataCS#section-patient-contacts "Patient contacts"
+* section[contacts].entry only Reference(AcsPatientContact)
+
+* section[additionalDemographics].title = "Patient Additional Demographics"
+* section[additionalDemographics].code = $LOINC#45970-1 "Patient Demographics"
+* section[additionalDemographics].entry only Reference(AcsPatientAge)
 
 * section[socialHistory].title = "Smoking and Vaping"
 * section[socialHistory].code = $LOINC#29762-2 "Social history"
@@ -79,11 +95,23 @@ Description: "The Composition that structures an Ambulance Care Summary FHIR doc
 
 * section[problems].title = "Problems"
 * section[problems].code = $LOINC#10154-3 "Chief complaint"
-* section[problems].entry only Reference(AcsPresentingComplaint or AcsEncounterDiagnosis or AcsAccidentObservation)
+* section[problems].entry only Reference(AcsPresentingComplaint or AcsEncounterDiagnosis or AcsAccidentObservation or AcsHistoryOfIncident)
+
+* section[primarySurvey].title = "Primary Survey"
+* section[primarySurvey].code = AcsMetadataCS#section-primary-survey "Primary survey"
+* section[primarySurvey].entry only Reference(AcsPrimarySurvey)
+
+* section[strokeAssessments].title = "Stroke Assessments"
+* section[strokeAssessments].code = AcsMetadataCS#section-stroke-assessments "Stroke assessments"
+* section[strokeAssessments].entry only Reference(AcsABCD2StrokeRiskAssessment or AcsFASTStrokeAssessment)
+
+* section[fallsRisk].title = "Falls Risk Assessment"
+* section[fallsRisk].code = AcsMetadataCS#section-falls-risk "Falls risk assessment"
+* section[fallsRisk].entry only Reference(AcsFallsRiskAssessment)
 
 * section[pastHistory].title = "Patient History"
 * section[pastHistory].code = $LOINC#11348-0 "History of past illness"
-* section[pastHistory].entry only Reference(AcsPastMedicalHistory)
+* section[pastHistory].entry only Reference(AcsPastMedicalHistory or AcsLastOralIntake)
 
 * section[allergies].title = "Allergies and Intolerances"
 * section[allergies].code = $LOINC#48765-2 "Allergies and adverse reactions"
@@ -105,6 +133,18 @@ Description: "The Composition that structures an Ambulance Care Summary FHIR doc
 * section[procedures].code = $LOINC#47519-4 "History of procedures"
 * section[procedures].entry only Reference(AcsProcedure)
 
+* section[refusal].title = "Transport/treatment Refusal"
+* section[refusal].code = AcsMetadataCS#section-refusal "Transport/treatment refusal"
+* section[refusal].entry only Reference(AcsTransportTreatmentRefusal)
+
+* section[competence].title = "Patient Competence"
+* section[competence].code = AcsMetadataCS#section-competence "Patient competence"
+* section[competence].entry only Reference(AcsPatientCompetenceAssessment)
+
 * section[carePlan].title = "Care Plan"
 * section[carePlan].code = $LOINC#18776-5 "Plan of care"
 * section[carePlan].entry only Reference(AcsCarePlan or AcsReferral or AcsAppointment)
+
+* section[clinicalImages].title = "Clinical Images"
+* section[clinicalImages].code = AcsMetadataCS#section-clinical-images "Clinical images"
+* section[clinicalImages].entry only Reference(AcsClinicalImage)
